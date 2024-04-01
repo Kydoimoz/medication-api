@@ -1,0 +1,216 @@
+FORMAT: 1A
+HOST: https://dAIgnosis.apiblueprint.com
+
+# dAIgnosis API
+
+#### This API allows users to access information about available medications.
+##### created for nextjs - app, just basically fetch it, link is provided in "REFERENCE".
+#####
+#####
+#####
+##### credits to major !!
+## Medications Collection [/medications]
+
+### List All Medications [GET]
+
++ Response 200 (application/json)
+
+    [
+        {
+            "name": "Aspirin",
+            "dosage": "100mg",
+            "manufacturer": "Bayer"
+        },
+        {
+            "name": "Paracetamol",
+            "dosage": "500mg",
+            "manufacturer": "Johnson & Johnson"
+        },
+        {
+            "name": "Ibuprofen",
+            "dosage": "200mg",
+            "manufacturer": "Pfizer"
+        },
+        {
+            "name": "Clopidogrel",
+            "dosage": "75mg",
+            "manufacturer": "AlphaTech Industries"
+        },
+        {
+            "name": "Enoxaparin",
+            "dosage": "50mg",
+            "manufacturer": "Nova Pharma"
+        },
+        {
+            "name": "Heparin",
+            "dosage": "500mg",
+            "manufacturer": "Precision Motors"
+        },
+        {
+            "name": "Diltiazem",
+            "dosage": "360mg",
+            "manufacturer": "Global Foods Ltd."
+        },
+        {
+            "name": "Verapamil",
+            "dosage": "480mg",
+            "manufacturer": "Bright Ideas Electronics"
+        },
+        {
+            "name": "Nifedipine",
+            "dosage": "90mg",
+            "manufacturer": "Titan Steelworks"
+        },
+        {
+            "name": "Atenolol",
+            "dosage": "100mg",
+            "manufacturer": "SilverStar Clothing Co."
+        },
+        {
+            "name": "Metoprolol",
+            "dosage": "75 mg",
+            "manufacturer": "Evergreen Pharmaceuticals"
+        },
+        {
+            "name": "Propranolol",
+            "dosage": "100 mg",
+            "manufacturer": "Dynamic Energy Solutions"
+        },
+        {
+            "name": "Nadolol",
+            "dosage": "200 mg",
+            "manufacturer": "Liberty Motors"
+        },
+        {
+            "name": "Hydralazine",
+            "dosage": "240 mg",
+            "manufacturer": "Elite Electronics"
+        },
+        {
+            "name": "Clonidine",
+            "dosage": "240 mg",
+            "manufacturer": "Sunburst Foods"
+        },
+        {
+            "name": "Methyldopa",
+            "dosage": "10 mg",
+            "manufacturer": "Quantum Pharmaceuticals"
+        },
+        {
+            "name": "Terazosin",
+            "dosage": "0.1 mg",
+            "manufacturer": "BlueSky Aerospace"
+        },
+        {
+            "name": "Doxazosin",
+            "dosage": "250 mg",
+            "manufacturer": "Golden Grain Mills"
+        },
+        {
+            "name": "Tamsulosin",
+            "dosage": "20 mg",
+            "manufacturer": "Starlight Plastics"
+        },
+        {
+            "name": "Finasteride",
+            "dosage": "16 mg",
+            "manufacturer": "Sapphire Technologies"
+        },
+        {
+            "name": "Dutasteride",
+            "dosage": "0.4 mg",
+            "manufacturer": "Sunrise Foods Inc."
+        },
+        {
+            "name": "Levothyroxine",
+            "dosage": "1 mg",
+            "manufacturer": "Ironclad Manufacturing"
+        },
+        {
+            "name": "Methimazole",
+            "dosage": "0.5 mg",
+            "manufacturer": "Pacific Crest Motors"
+        },
+        {
+            "name": "Propylthiouracil",
+            "dosage": "40 mg",
+            "manufacturer": "Summit Pharmaceuticals"
+        },
+        {
+            "name": "Liothyronine",
+            "dosage": "50 mg",
+            "manufacturer": "Sparkle Electronics"
+        },
+        {
+            "name": "Insulin",
+            "dosage": "40 mg",
+            "manufacturer": "Diamond Motors Ltd."
+        },
+        {
+            "name": "Glipizide",
+            "dosage": "15 mg",
+            "manufacturer": "Redwood Robotics"
+        },
+        {
+            "name": "Metformin",
+            "dosage": "4 mg",
+            "manufacturer": "Radiant Foods"
+        },
+        {
+            "name": "Pioglitazone",
+            "dosage": "100 mg",
+            "manufacturer": "Apex Pharmaceuticals"
+        },
+        {
+            "name": "Rosiglitazone",
+            "dosage": "5 mg",
+            "manufacturer": "Crystal Clear Electronics"
+        },
+        {
+            "name": "Sitagliptin",
+            "dosage": "5 mg",
+            "manufacturer": "MagnaSteel Inc."
+        },
+        {
+            "name": "Linagliptin",
+            "dosage": "1 mg",
+            "manufacturer": "Oceanic Foods"
+        },
+        {
+            "name": "Exenatide",
+            "dosage": "1 mg",
+            "manufacturer": "Matrix Motors"
+        },
+        {
+            "name": "Liraglutide",
+            "dosage": "100 mg",
+            "manufacturer": "Swift Solutions Ltd."
+        }
+ 
+    ]
+
+### Add a New Medication [POST]
+
+You may add a new medication using this action. It takes a JSON object containing medication details.
+
++ Request (application/json)
+
+    {
+        "name": "Medication Name",
+        "dosage": "Medication Dosage",
+        "manufacturer": "Medication Manufacturer"
+    }
+
++ Response 201 (application/json)
+
+    + Headers
+
+            Location: /medications/123
+
+    + Body
+
+            {
+                "name": "Medication Name",
+                "dosage": "Medication Dosage",
+                "manufacturer": "Medication Manufacturer"
+            }
